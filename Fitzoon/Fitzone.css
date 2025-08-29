@@ -1,0 +1,323 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #4e8ac2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff4c68;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero {
+    height: 100vh;
+    background: url('images/bgimage.jpg') no-repeat center center/cover;
+    background-color: #3c75cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(56, 108, 167);
+    width: 100vw; /* full screen width */
+    height: 100vh; /* full screen height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+    
+}
+
+.hero-overlay {
+    text-align: center;
+    text-size-adjust: 10;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+.cta-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    overflow: hidden;
+    display: flex;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0s ease;
+    animation: slideAnimation 12s infinite;
+}
+
+/* Animation */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+/* Membership Section */
+.membership-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.membership-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.membership-card {
+    background: rgb(40, 114, 173);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.membership-card:hover {
+    transform: scale(1.05);
+}
+
+.featured {
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #333;
+}
+
+.membership-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+}
+
+.membership-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.membership-card ul li {
+    padding: 5px 0;
+}
+
+.join-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.join-btn:hover {
+    background: #d62828;
+}
+
+.promo {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Auth Form Styling - Login & Register */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #00b894, #55efc4);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for both forms */
+.auth-container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.auth-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d3436;
+    font-size: 28px;
+}
+
+/* Input fields */
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.auth-container select {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border 0.2s ease;
+}
+
+.auth-container input:focus,
+.auth-container select:focus {
+    border-color: #00b894;
+    outline: none;
+}
+
+/* Button */
+.auth-container button {
+    padding: 12px;
+    background-color: #00b894;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+    background-color: #019875;
+}
+
+/* Message box */
+.message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.message a {
+    color: #00b894;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
